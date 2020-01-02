@@ -10,6 +10,7 @@ func init() {
 	logger = logrus.StandardLogger()
 }
 
+// Logger Logger interface
 type Logger interface {
 	Print(...interface{})
 	Printf(string, ...interface{})
@@ -27,6 +28,7 @@ type Logger interface {
 	Panicf(string, ...interface{})
 }
 
+// SetLogger set custom logger
 func SetLogger(log Logger) {
 	logger = log
 }
